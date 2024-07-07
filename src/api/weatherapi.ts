@@ -17,13 +17,37 @@ export interface City {
 
     export interface Weather {
         location: {
-          name: string;
-        };
-        current: {
-          temp_c: number;
+            name: string;
+            country: string;
+          };
+          current: {
+            temp_c: number;
+            humidity: number;
+            wind_kph: number;
+            condition: {
+              text: string;
+              icon: string;
+            };
+          };
+      }
+
+      export interface ForecastDay {
+        date: string;
+        day: {
+          maxtemp_c: number;
+          mintemp_c: number;
+          avgtemp_c: number;
           condition: {
             text: string;
+            icon: string;
           };
+          daily_chance_of_rain: number;
+        };
+      }
+
+      export interface WeatherForecast extends Weather {
+        forecast: {
+          forecastday: ForecastDay[];
         };
       }
 
@@ -36,3 +60,8 @@ export const searchCity = async (query: string): Promise<City[]> => {
     const { data } = await axios.get(`${BASE_URL}/search.json?key=${API_KEY}&q=${query}`)
     return data
 }
+
+export const fetchWeatherForecast = async (city: string): Promise<WeatherForecast> => {
+    const { data } = await axios.get(`${BASE_URL}/forecast.json?key=${API_KEY}&q=${city}&days=7`)
+    return data;
+  }

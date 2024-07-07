@@ -60,9 +60,12 @@ const Search: React.FC = () => {
       {error && <p className="error">{error}</p>}
       {weather && !loading && !error && (
         <div className="weather-info">
-          <h2>{weather.location.name}</h2>
-          <p>{weather.current.temp_c}°C</p>
-          <p>{weather.current.condition.text}</p>
+          <h2>{weather.location.name}, {weather.location.country}</h2>
+          <img src={weather.current.condition.icon} alt={weather.current.condition.text} />
+          <p>Temperature: {weather.current.temp_c}°C</p>
+          <p>Condition: {weather.current.condition.text}</p>
+          <p>Humidity: {weather.current.humidity}%</p>
+          <p>Wind Speed: {weather.current.wind_kph} km/h</p>
         </div>
       )}
     </div>
