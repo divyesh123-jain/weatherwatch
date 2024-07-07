@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import SearchBar from './SearchBar';
 import { WeatherForecast , fetchWeatherForecast } from '../api/weatherapi';
+import CurrentWeather from './CurrentWeather';
 const WeatherSearch: React.FC = () => {
     const [weather, setWeather] = useState<WeatherForecast | null>(null);
     const [loading, setLoading] = useState<boolean>(false);
@@ -23,6 +24,11 @@ const WeatherSearch: React.FC = () => {
     return (
         <>
          <SearchBar onSearch={handleSearch} />
+         {weather && !loading && !error && (
+            <>
+            <CurrentWeather weather={weather} />
+            </>
+            )}
         </>
     )
 }
