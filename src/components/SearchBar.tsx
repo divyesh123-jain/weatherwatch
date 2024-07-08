@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import { TextField, List, ListItem, ListItemText } from '@mui/material';
-import { searchCity, City } from '../api/weatherapi';
+import { searchCity } from '../api/weatherapi';
+import { City } from '../types/weather';
 
 interface SearchBarProps {
   onSearch: (city: string) => void;
