@@ -9,7 +9,7 @@ interface CurrentWeatherProps {
 
 const CurrentWeather: React.FC<CurrentWeatherProps> = ({weather}) => {
   return (
-    <Card sx={{ mt: 2, borderRadius: 4, boxShadow: 3, backgroundColor: '#282c34', color: 'white', width: 800 }}>
+    <Card sx={{ mt: 2, borderRadius: 4, boxShadow: 3, backgroundColor: '#282c34', color: 'white', width: 400 }}>
       <CardContent>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="h5" component="div">
