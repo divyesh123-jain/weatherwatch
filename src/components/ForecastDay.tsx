@@ -7,8 +7,15 @@ interface ForecastDayProps {
 const ForecastDay:React.FC<ForecastDayProps> = ({day}) => {
   return (
    <>
-   <Card sx={{ mt: 2, borderRadius: 4, boxShadow: 3, backgroundColor: '#282c34', color: 'white', height:180, 
-    }}>
+   <Card sx={{ 
+     mt: 2, 
+     borderRadius: 4, 
+     boxShadow: 3, 
+     backgroundColor: '#282c34', 
+     color: 'white', 
+     height: { xs: 'auto', sm: 180 }, // Responsive height
+     minHeight: 180, // Ensure a minimum height
+   }}>
     <CardContent>
       <Typography variant="subtitle1">
         {new Date(day.date).toLocaleDateString('en-US', { weekday: 'short' })}
