@@ -82,6 +82,7 @@ Material-UI for the UI components.
 Tailwind CSS for additional styling.
 Recharts for data visualization.
 Vite for the build tool.
+
 ## API Reference
 
 
