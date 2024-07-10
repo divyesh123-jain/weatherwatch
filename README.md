@@ -143,7 +143,5 @@ https://i.imgur.com/SlxC3yU_d.webp?maxwidth=1520&fidelity=grand
 ## Dashboard
 
 | ![Disp1](https://i.imgur.com/fdgIiHE.png) | ![disp2](
-https://i.imgur.com/SlxC3yU_d.webp?maxwidth=1520&fidelity=grand) |
-| ---------------------------------------- | ---------------------------------------- |
-| ![disp3](https://user-images.githubusercontent.com/85030597/203629972-57fdafc4-447c-49b0-aee4-6f982b39cb4d.png) | 
+https://i.imgur.com/SlxC3yU_d.webp?maxwidth=1520&fidelity=grand) 
 | ![disp5](https://i.imgur.com/fFu5uny_d.webp?maxwidth=1520&amp;fidelity=grand) |
