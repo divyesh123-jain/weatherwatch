@@ -85,10 +85,17 @@ Recharts for data visualization.
 Vite for the build tool.
 ## API Reference
 
-#### Get all items
 
-```http
-  GET /api/items
+
+## Base URL: http://api.weatherapi.com/v1
+API Methods
+
+# Current weather: /current.json or /current.xml
+# Forecast: /forecast.json or /forecast.xml
+## Example Request:
+
+
+
 ```
 
 | Parameter | Type     | Description                |
@@ -98,16 +105,13 @@ Vite for the build tool.
 #### Get item
 
 ```http
-  GET /api/items/${id}
+http://api.weatherapi.com/v1/current.json?key=your_api_key&q=London
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
 
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
 
 
 ## Deployment
