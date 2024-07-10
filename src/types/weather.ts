@@ -125,6 +125,13 @@ export interface City {
   export interface Forecast {
     forecastday: ForecastDay[];
   }
+  type WeatherAlert = {
+    title: string;
+    description: string;
+    severity: string;
+    effective: string;
+    expires: string;
+  };
   
   export interface WeatherForecast {
     location: {
@@ -139,4 +146,7 @@ export interface City {
     };
     current: Weather;
     forecast: Forecast;
+    alerts?: WeatherAlert[];
   }
+
+  

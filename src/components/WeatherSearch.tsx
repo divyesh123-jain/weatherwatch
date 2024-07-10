@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar';
 import { fetchWeatherForecast } from '../api/weatherapi';
 import { WeatherForecast } from '../types/weather';
@@ -8,26 +8,29 @@ import TemperatureChart from './TemperatureChart';
 import axios from 'axios';
 import ErrorMessage from './ErrorMessage';
 import RainProbabilityChart from './RainProbabilityChart';
-import CardComponent from './Card';
+import FavoriteCities from './FavoriteCities';
 
 interface WeatherSearchProps {
-    initialCity: string;
-  }
+  initialCity: string;
+}
 
 const WeatherSearch: React.FC<WeatherSearchProps> = ({ initialCity }) => {
   const [weather, setWeather] = useState<WeatherForecast | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [currentCity, setCurrentCity] = useState<string>(initialCity);
-
-
-  React.useEffect(() => {
-    handleSearch(initialCity);
-  }, [initialCity]);
+  const [favorites, setFavorites] = useState<string[]>(() => {
+    const savedFavorites = localStorage.getItem('favorites');
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
 
   useEffect(() => {
     handleSearch(initialCity);
   }, [initialCity]);
+
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
 
   const handleSearch = async (city: string) => {
     setLoading(true);
@@ -40,7 +43,7 @@ const WeatherSearch: React.FC<WeatherSearchProps> = ({ initialCity }) => {
       setWeather(response);
     } catch (err) {
       console.error("Error fetching weather:", err);
-      
+
       if (axios.isAxiosError(err)) {
         if (err.response) {
           if (err.response.status === 400) {
@@ -69,9 +72,28 @@ const WeatherSearch: React.FC<WeatherSearchProps> = ({ initialCity }) => {
     }
   };
 
+  const handleAddFavorite = () => {
+    if (!favorites.includes(currentCity)) {
+      setFavorites([...favorites, currentCity]);
+    }
+  };
+
+  const handleRemoveFavorite = (city: string) => {
+    setFavorites(favorites.filter(favorite => favorite !== city));
+  };
+
+  const handleSelectFavorite = (city: string) => {
+    handleSearch(city);
+  };
+
   return (
     <section className="flex flex-col md:flex-row md:h-screen h-auto w-full bg-black">
-      <div className="flex-1 bg-black px-4 pb-4 md:p-4"></div>
+       
+      <FavoriteCities favorites={favorites} onRemoveFavorite={handleRemoveFavorite} onSelectFavorite={handleSelectFavorite} />
+     
+      <div className="flex-1 bg-black px-4 w-auto pb-4 md:p-4">
+     
+      </div>
       <div className="bg-[#c9c5b6] rounded-xl flex flex-col gap-2 w-full p-4 h-full md:rounded-[20px]">
         <div className="grow">
           <div className="flex justify-center items-center"></div>
@@ -82,9 +104,9 @@ const WeatherSearch: React.FC<WeatherSearchProps> = ({ initialCity }) => {
                   <h2 className="text-5xl text-black capitalize">Hi, {`${currentCity}`}</h2>
 
                   <div className='flex flex-col'>
-                  <SearchBar onSearch={handleSearch} />
+                    <SearchBar onSearch={handleSearch} />
+                    <button onClick={handleAddFavorite}>Add to Favorites</button>
                   </div>
-           
                 </div>
                 <div className="relative lilBox h-full">
                   {weather && !loading && !error && (
@@ -120,7 +142,13 @@ const WeatherSearch: React.FC<WeatherSearchProps> = ({ initialCity }) => {
                 </>
               )}
             </div>
+            {error && (
+              <div className="w-full">
+                <ErrorMessage message={error} />
+              </div>
+            )}
           </main>
+          
         </div>
       </div>
     </section>
