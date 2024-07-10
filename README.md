@@ -139,3 +139,11 @@ https://i.imgur.com/fdgIiHE.png
 https://i.imgur.com/SlxC3yU_d.webp?maxwidth=1520&fidelity=grand
 
 "https://i.imgur.com/fFu5uny_d.webp?maxwidth=1520&amp;fidelity=grand"
+
+## Dashboard
+
+| ![Disp1](https://i.imgur.com/fdgIiHE.png) | ![disp2](
+https://i.imgur.com/SlxC3yU_d.webp?maxwidth=1520&fidelity=grand) |
+| ---------------------------------------- | ---------------------------------------- |
+| ![disp3](https://user-images.githubusercontent.com/85030597/203629972-57fdafc4-447c-49b0-aee4-6f982b39cb4d.png) | ![disp4](https://user-images.githubusercontent.com/85030597/203630033-1f61e654-958b-45ce-af1f-a472fd76996f.png) |
+| ![disp5]("https://i.imgur.com/fFu5uny_d.webp?maxwidth=1520&amp;fidelity=grand") | ![disp6](https://user-images.githubusercontent.com/85030597/203632727-054c453e-0667-4386-87b9-11dc56d5633c.png) |
