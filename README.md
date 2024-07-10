@@ -142,6 +142,6 @@ https://i.imgur.com/SlxC3yU_d.webp?maxwidth=1520&fidelity=grand
 
 ## Dashboard
 
-| ![Disp1](https://i.imgur.com/fdgIiHE.png) | ![disp2](
+ ![Disp1](https://i.imgur.com/fdgIiHE.png)  ![disp2](
 https://i.imgur.com/SlxC3yU_d.webp?maxwidth=1520&fidelity=grand) 
-| ![disp5](https://i.imgur.com/fFu5uny_d.webp?maxwidth=1520&amp;fidelity=grand) |
+ ![disp5](https://i.imgur.com/fFu5uny_d.webp?maxwidth=1520&amp;fidelity=grand) 
