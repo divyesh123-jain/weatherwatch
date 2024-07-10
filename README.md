@@ -1,4 +1,4 @@
-# Weather Dashboard
+# WeatherWatch
 
 This Weather Dashboard application allows users to search for cities and view current weather information, a 7-day forecast, and temperature trends. The app is built using React with TypeScript, and styled with Material-UI and Tailwind CSS. For data visualization, Recharts is used to display temperature trends.
 
