@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import SearchBar from './SearchBar';
-import { fetchWeatherForecast } from '../api/weatherapi';
-import { WeatherForecast } from '../types/weather';
-import CurrentWeather from './CurrentWeather';
-import ForecastList from './ForecastList';
-import TemperatureChart from './TemperatureChart';
+import SearchBar from '../Weather/SearchBar';
+import { fetchWeatherForecast } from '../../api/weatherapi';
+import { WeatherForecast } from '../../types/weather';
+import CurrentWeather from '../Weather/CurrentWeather';
+import ForecastList from '../Forecast/ForecastList';
+import TemperatureChart from '../Charts/TemperatureChart';
 import axios from 'axios';
-import ErrorMessage from './ErrorMessage';
-import RainProbabilityChart from './RainProbabilityChart';
-import FavoriteCities from './FavoriteCities';
+import ErrorMessage from '../ErrorMessage';
+import RainProbabilityChart from '../Charts/RainProbabilityChart';
+import FavoriteCities from '../Forecast/FavoriteCities';
 
 interface WeatherSearchProps {
   initialCity: string;
@@ -89,8 +89,9 @@ const WeatherSearch: React.FC<WeatherSearchProps> = ({ initialCity }) => {
   return (
     <section className="flex flex-col md:flex-row md:h-screen h-auto w-full bg-black">
        
+   
       <FavoriteCities favorites={favorites} onRemoveFavorite={handleRemoveFavorite} onSelectFavorite={handleSelectFavorite} />
-     
+  
       <div className="flex-1 bg-black px-4 w-auto pb-4 md:p-4">
      
       </div>

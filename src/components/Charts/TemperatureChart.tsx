@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { Forecast } from '../types/weather';
+import { Forecast } from '../../types/weather';
 
 interface TemperatureChartProps {
   forecast: Forecast;

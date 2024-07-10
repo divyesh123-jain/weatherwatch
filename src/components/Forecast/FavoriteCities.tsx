@@ -11,13 +11,13 @@ interface FavoriteCitiesProps {
 
 const FavoriteCities: React.FC<FavoriteCitiesProps> = ({ favorites, onRemoveFavorite, onSelectFavorite }) => {
   return (
-    <Box sx={{ width: { xs: '100%', md: '20%' }, mt: 2 }}>
-      <Typography variant="h5" gutterBottom>
+    <Box sx={{ width: { xs: '100%', md: '20%' ,color:'#c9c5b6' }, mt: 2,  }}>
+      <Typography variant="h5" color='#c9c5b6' gutterBottom>
         Favorite Cities
       </Typography>
       {favorites.map((city) => (
-        <Card key={city} sx={{ mb: 2 }}>
-          <CardContent>
+        <Card  key={city} sx={{ mb: 2, }} >
+          <CardContent sx={{}}>
             <Typography variant="h6">{city}</Typography>
           </CardContent>
           <CardActions>

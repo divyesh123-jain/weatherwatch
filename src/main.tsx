@@ -4,7 +4,7 @@ import App from './App.tsx'
 import './index.css'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import WeatherSearch from './components/WeatherSearch.tsx';
+import WeatherSearch from './components/Weather/WeatherSearch.tsx';
 import { Lan } from '@mui/icons-material';
 import LandingPage from './components/LandingPage.tsx';
 

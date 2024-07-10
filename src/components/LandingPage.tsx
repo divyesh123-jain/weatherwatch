@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import SearchBar from './SearchBar';
-import WeatherSearch from './WeatherSearch';
+import SearchBar from '../components/Weather/SearchBar';
+import WeatherSearch from './Weather/WeatherSearch';
 
 const LandingPage: React.FC = () => {
   const [selectedCity, setSelectedCity] = useState<string | null>(null);

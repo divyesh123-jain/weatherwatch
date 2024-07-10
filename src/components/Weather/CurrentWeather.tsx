@@ -1,5 +1,5 @@
 import React from 'react';
-import { WeatherForecast } from '../types/weather';
+import { WeatherForecast } from '../../types/weather';
 import { Card, CardContent, Typography, Box, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 

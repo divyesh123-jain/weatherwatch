@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
   Legend
 } from 'recharts';
-import { Forecast } from '../types/weather';
+import { Forecast } from '../../types/weather';
 import { Box, Typography } from '@mui/material';
 
 interface RainProbabilityChartProps {

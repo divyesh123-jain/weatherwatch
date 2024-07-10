@@ -1,5 +1,5 @@
 import React from 'react'
-import { ForecastDay as ForecastDayType } from '../types/weather';
+import { ForecastDay as ForecastDayType } from '../../types/weather';
 import { Card, CardContent, Typography, Box } from '@mui/material';
 interface ForecastDayProps {
     day: ForecastDayType;

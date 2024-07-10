@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Grid } from '@mui/material';
 import ForecastDay from './ForecastDay';
-import { Forecast } from '../types/weather';
+import { Forecast } from '../../types/weather';
 
 interface ForecastListProps {
   forecast: Forecast;
