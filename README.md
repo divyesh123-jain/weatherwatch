@@ -41,8 +41,8 @@ This Weather Dashboard application allows users to search for cities and view cu
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/weather-dashboard.git
-   cd weather-dashboard
+   git clone https://github.com/divyesh123-jain/weatherwatch.git
+   cd weatherwatch
 # Install dependencies:
 
 bash
@@ -130,15 +130,7 @@ To run this project, you will need to add the following environment variables to
 
 
 
-## Demo
 
-Insert gif or link to demo
-
-https://i.imgur.com/fdgIiHE.png
-
-https://i.imgur.com/SlxC3yU_d.webp?maxwidth=1520&fidelity=grand
-
-"https://i.imgur.com/fFu5uny_d.webp?maxwidth=1520&amp;fidelity=grand"
 
 ## Dashboard
 
