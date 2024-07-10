@@ -68,7 +68,7 @@ Save favorite cities for quick access.
 Contributing
 Contributions are welcome! Please follow these steps to contribute:
 
-Fork the repository.
+## Fork the repository.
 Create a new branch: git checkout -b feature-name.
 Make your changes and commit them: git commit -m 'Add new feature'.
 Push to the branch: git push origin feature-name.
@@ -76,12 +76,57 @@ Open a pull request.
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgements
-OpenWeatherMap for the weather API.
+## Acknowledgements
+WeatherApi for the weather API.
 Material-UI for the UI components.
 Tailwind CSS for additional styling.
 Recharts for data visualization.
 Vite for the build tool.
+
+## Project Structure 
+
+- .eslintrc.cjs
+- .gitignore
+- index.html
+- package-lock.json
+- package.json
+- postcss.config.js
+- public
+  - vite.svg
+- README.md
+- src
+  - api
+    - weatherapi.ts
+  - App.css
+  - App.tsx
+  - assets
+    - react.svg
+  - components
+    - Charts
+      - RainProbabilityChart.tsx
+      - TemperatureChart.tsx
+    - ErrorMessage.tsx
+    - Forecast
+      - FavoriteCities.tsx
+      - ForecastDay.tsx
+      - ForecastList.tsx
+    - LandingPage.tsx
+    - Weather
+      - CurrentWeather.tsx
+      - SearchBar.tsx
+      - WeatherAlerts.tsx
+      - WeatherSearch.tsx
+  - index.css
+  - main.tsx
+  - types
+    - weather.ts
+  - vite-env.d.ts
+- tailwind.config.js
+- tsconfig.app.json
+- tsconfig.json
+- tsconfig.node.json
+- vite.config.ts
+
 
 ## API Reference
 
