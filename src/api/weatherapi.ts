@@ -5,7 +5,7 @@ const BASE_URL = 'https://api.weatherapi.com/v1'
 
 
 
-      export const fetchweather = async (city: string): Promise<Weather> => {
+export const fetchweather = async (city: string): Promise<Weather> => {
         const { data } = await axios.get(`${BASE_URL}/current.json?key=${API_KEY}&q=${city}`)
         return data
       }

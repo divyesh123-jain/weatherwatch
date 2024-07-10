@@ -26,8 +26,7 @@ This Weather Dashboard application allows users to search for cities and view cu
  
 8. **Optional Features**:
    - Allow users to save their favorite cities and quickly access weather information for those cities.
-   - Display weather alerts or notifications.
-   - Provide localization support to display weather information in different languages.
+   
 
 # Tech Stack
 
@@ -129,10 +128,14 @@ To run this project, you will need to add the following environment variables to
 
 `API_KEY`
 
-`ANOTHER_API_KEY`
 
 
 ## Demo
 
 Insert gif or link to demo
 
+https://i.imgur.com/fdgIiHE.png
+
+https://i.imgur.com/SlxC3yU_d.webp?maxwidth=1520&fidelity=grand
+
+"https://i.imgur.com/fFu5uny_d.webp?maxwidth=1520&amp;fidelity=grand"
